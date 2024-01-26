@@ -66,6 +66,54 @@ print(f"Primeros primos: {primos}")
 
 
 
+def invertir_palabras(cadena):
+    palabras = cadena.split()
+    palabras_invertidas = palabras[::-1]
+    cadena_invertida = ' '.join(palabras_invertidas)
+    return cadena_invertida
+mi_cadena = "La curiosidad es una habilidad"
+resultado = invertir_palabras(mi_cadena)
+
+print(f"Mi cadena: {mi_cadena}")
+print(f"Cadena con palabras invertidas: {resultado}")
+
+
+
+def ultimo_elemento(lista_de_tuplas):
+    return sorted(lista_de_tuplas, key=lambda tupla: tupla[-1])
+tuplas = [(2, 6, 4), (23, 28, 30), (7, 9, 11), (15, 20, 17)]
+lista_ordenada = ultimo_elemento(tuplas)
+
+print(f"Lista de tuplas: {tuplas}")
+print(f"Lista ordenada por último elemento: {lista_ordenada}")
+
+
+
+def contar_vocales(cadena):
+    vocales = "aeiouAEIOU"
+    cantidad_vocales = sum(1 for letra in cadena if letra in vocales)
+    return cantidad_vocales
+mi_cadena = "Bienvenido al mundo digital"
+resultado = contar_vocales(mi_cadena)
+
+print(f"Cadena: {mi_cadena}")
+print(f"Cantidad vocales: {resultado}")
+
+
+def es_primo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
+mi_numero = int(input("Ingresa un numero: "))
+resultado = es_primo(mi_numero)
+
+print(resultado)
+
+
+
     
 
 
